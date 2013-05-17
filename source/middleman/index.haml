@@ -1,0 +1,118 @@
+---
+title: Static Sites with Middleman
+description: Create fast sites with your favorite Ruby tools
+---
+
+= step "title", x: 0, y: 0 do
+  %h1 Static Sites with Middleman
+  %h4
+    Josh W Lewis
+    %a{href: "//twitter.com/joshwlewis"} @joshwlewis
+  %date 5/23/2013
+
+= step "project", x: 1200, y: 0 do
+  %h1 I want my own place on the web to put my thoughts and ramblings!
+
+= step "options", x: 2400, y: 0 do
+  %h1 What should I use?
+  %h4
+    %ul
+      %li Wordpress
+      %li Movable Type
+      %li Drupal
+      %li Roll my own with Rails
+
+= step "needs", x: 3600, y: 0 do
+  %h3 Do I really need all this?
+  %ul
+    %li Authentication
+    %li Admin Panel
+    %li WYSIWYG Editor
+    %li Database
+    %li Sophisticated Caching
+    %li High-performance Server
+
+= step "static-site", x: 4800, y: 0 do
+  %h2 What about a static site?
+  %h4
+    %ul
+      %li It would be fast...
+      %li I could put it on ANY server...
+
+= step "sucks", x: 4800, y: 0, 'rotate-x' => 90 do
+  %h2 But, that just sucks!
+
+= step "middleman", x: 6000, y: 0 do
+  %h2 Enter Middleman
+  %h4 Static Site Generator built with Ruby
+  %h4
+    %a{href: '//middlemanapp.com'} middlemanapp.com
+
+= step "overview", x: 7200, y: 1500 do
+  %h2 Middleman lets you:
+  %h4
+    %ul
+      %li Deploy anywhere!
+      %li Build incredibly fast sites!
+      %li Use layouts and partials!
+      %li Use Rails-like helpers!
+      %li Use your favorite RubyGems!
+      %li Write Ruby Code!
+
+= step "meta-1", x: 8400, y: 3000 do
+  %h3 The code in this presentation...
+
+= step "meta-2", x: 8550, y: 3000 do
+  %h3 ...built this presentation.
+  %a{href: "//github.com/joshwlewis/presentation"} github.com/joshwlewis/presentation
+
+= step "layouts", x: 9600, y: 5000 do
+  %h2 Layouts
+  %p source/layouts/layout.haml
+  %pre= partial "layout"
+
+= step "helpers", x: 9600, y: 7000 do
+  %h2 Helpers
+  %p source/helpers/site_helper.rb
+  %pre= partial "helpers"
+
+= step "views", x: 9600, y: 9000 do
+  %h2 Views
+  %p source/middleman/index.haml
+  %pre
+    = partial "views"
+
+= step "partials", x: 9600, y: 11000 do
+  %h2 Partials
+  %p source/_fallback.md
+  %pre= partial "partials"
+
+= step "stylesheets", x: 9600, y: 13000 do
+  %h2 Stylesheets
+  %p source/stylesheets/application.sass
+  %pre= partial 'stylesheets'
+
+= step "javascripts", x: 9600, y: 15000 do
+  %h2 Javascripts
+  %p source/javascripts/applicaiton/tweet.coffee
+  %pre= partial 'javascripts'
+  .well
+    .tweets
+
+= step "installation", x: 9600, y: 3000 do
+  %h1 Installation
+  %pre
+    gem install middleman
+
+= step "create", x: 10800, y: 3000 do
+  %h1 Create your project
+  %pre
+    middleman init sample
+
+= step "start", x: 12000, y: 3000 do
+  %h1 Start the development server
+  %pre
+    cd sample
+    bundle exec middleman server
+  %h3 You are live!
+  %h4 View the site at localhost:4567

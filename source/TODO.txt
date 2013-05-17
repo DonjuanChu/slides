@@ -1,0 +1,9 @@
+
+Things to mention
+
+live-reload
+build
+deploy
+sass
+coffee
+asset compilation
