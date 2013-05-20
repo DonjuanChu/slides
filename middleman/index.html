@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<html class='no-js'>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title>Static Sites with Middleman | Josh W Lewis</title>
+<meta content='Create fast sites with your favorite Ruby tools' name='description'>
+<meta content='width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<meta content='Josh W Lewis' name='author'>
+<script src="/javascripts/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
+<link href="/stylesheets/application-253ab29c.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class='impress-not-supported'>
+<div class='fallback-message'><h3>Your browser doesn&#39;t support the features needed to display this presentation.</h3>
+
+<p>A simplified version of this presentation follows.</p>
+
+<p>For the best experience, please use one of the following browsers:</p>
+
+<ul>
+<li><a href="//www.google.com/chrome">Chrome</a></li>
+<li><a href="//www.apple.com/safari">Safari</a></li>
+<li><a href="//www.mozilla.org/firefox">Firefox</a></li>
+</ul>
+</div>
+<div id='impress'>
+<div id="title" class="step" data-x="0" data-y="0"><h1>Static Sites with Middleman</h1>
+<h4>
+Josh W Lewis
+<a href='//twitter.com/joshwlewis'>@joshwlewis</a>
+</h4>
+<date>5/23/2013</date>
+</div><div id="project" class="step" data-x="1200" data-y="0"><h1>I want my own place on the web to put my thoughts and ramblings!</h1>
+</div><div id="options" class="step" data-x="2400" data-y="0"><h1>What should I use?</h1>
+<h4>
+<ul>
+<li>Wordpress</li>
+<li>Movable Type</li>
+<li>Drupal</li>
+<li>Roll my own with Rails</li>
+</ul>
+</h4>
+</div><div id="needs" class="step" data-x="3600" data-y="0"><h3>Do I really need all this?</h3>
+<ul>
+<li>Authentication</li>
+<li>Admin Panel</li>
+<li>WYSIWYG Editor</li>
+<li>Database</li>
+<li>Sophisticated Caching</li>
+<li>High-performance Server</li>
+</ul>
+</div><div id="static-site" class="step" data-x="4800" data-y="0"><h2>What about a static site?</h2>
+<h4>
+<ul>
+<li>It would be fast...</li>
+<li>I could put it on ANY server...</li>
+</ul>
+</h4>
+</div><div id="sucks" class="step" data-x="4800" data-y="0" data-rotate-x="90"><h2>But, that just sucks!</h2>
+</div><div id="middleman" class="step" data-x="6000" data-y="0"><h2>Enter Middleman</h2>
+<h4>Static Site Generator built with Ruby</h4>
+<h4>
+<a href='//middlemanapp.com'>middlemanapp.com</a>
+</h4>
+</div><div id="overview" class="step" data-x="7200" data-y="1500"><h2>Middleman lets you:</h2>
+<h4>
+<ul>
+<li>Deploy anywhere!</li>
+<li>Build incredibly fast sites!</li>
+<li>Use layouts and partials!</li>
+<li>Use Rails-like helpers!</li>
+<li>Use your favorite RubyGems!</li>
+<li>Write Ruby Code!</li>
+</ul>
+</h4>
+</div><div id="meta-1" class="step" data-x="8400" data-y="3000"><h3>The code in this presentation...</h3>
+</div><div id="meta-2" class="step" data-x="8550" data-y="3000"><h3>...built this presentation.</h3>
+<a href='//github.com/joshwlewis/presentation'>github.com/joshwlewis/presentation</a>
+</div><div id="layouts" class="step" data-x="9600" data-y="5000"><h2>Layouts</h2>
+<p>source/layouts/layout.haml</p>
+<pre class="highlight haml"><span class="nn">!!!5
+</span><span class="nt">%html</span>
+  <span class="nt">%head</span>
+    <span class="nt">%meta</span><span class="p">{</span><span class="n">charset</span><span class="p">:</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">}</span>
+    <span class="nt">%title</span><span class="p">=</span> <span class="n">page_title</span>
+    <span class="nt">%meta</span><span class="p">{</span><span class="n">content</span><span class="p">:</span> <span class="n">page_description</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s2">&quot;description&quot;</span><span class="p">}</span>
+    ...
+    <span class="p">=</span> <span class="n">stylesheet_link_tag</span> <span class="s2">&quot;application&quot;</span>
+  <span class="nt">%body</span>
+    <span class="nc">.fallback-message</span><span class="p">=</span> <span class="n">partial</span> <span class="s1">'fallback'</span>
+    <span class="p">=</span> <span class="k">yield</span>
+    ...
+    <span class="p">=</span> <span class="n">javascript_include_tag</span> <span class="s2">&quot;application&quot;</span>
+</pre>
+</div><div id="helpers" class="step" data-x="9600" data-y="7000"><h2>Helpers</h2>
+<p>source/helpers/site_helper.rb</p>
+<pre>module SiteHelpers
+  def page_title
+    [data.page.title, "Josh W Lewis"].join(' | ')
+  end
+
+  def page_description
+    data.page.description || "Presentation by Josh W Lewis"
+  end
+
+  def step(name, options, &block)
+    content_tag(:div, id: name, class: :step, data: options ) do
+      block_given? ? capture(&block) : nil
+    end
+  end
+end</pre>
+</div><div id="views" class="step" data-x="9600" data-y="9000"><h2>Views</h2>
+<p>source/middleman/index.haml</p>
+<pre>
+---
+title: Static Sites with Middleman
+description: Create fast sites with your favorite Ruby tools
+---
+
+= step "title", x: 0, y: 0 do
+  %h1 Static Sites with Middleman
+  %h4
+    Josh W Lewis
+    %a{href: "//twitter.com/joshwlewis"} @joshwlewis
+  %date 5/23/2013</pre>
+</div><div id="partials" class="step" data-x="9600" data-y="11000"><h2>Partials</h2>
+<p>source/_fallback.md</p>
+<pre>### Your browser doesn't support the features needed to display this presentation.
+
+A simplified version of this presentation follows.
+
+For the best experience, please use one of the following browsers:
+
+- [Chrome](//www.google.com/chrome)
+- [Safari](//www.apple.com/safari)
+- [Firefox](//www.mozilla.org/firefox)</pre>
+</div><div id="stylesheets" class="step" data-x="9600" data-y="13000"><h2>Stylesheets</h2>
+<p>source/stylesheets/application.sass</p>
+<pre>@import url(//fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono)
+
+$sansFontFamily: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+$baseFontSize: 24px
+$baseLineHeight: 36px
+@import "bootstrap"
+
+body.impress-supported
+  .fallback-message
+    display: none</pre>
+</div><div id="javascripts" class="step" data-x="9600" data-y="15000"><h2>Javascripts</h2>
+<p>source/javascripts/applicaiton/tweet.coffee</p>
+<pre>jQuery ->
+  $(".tweets").tweet
+    avatar_size: 48
+    count: 3
+    query: "#memtech"</pre>
+<div class='well'>
+<div class='tweets'></div>
+</div>
+</div><div id="installation" class="step" data-x="9600" data-y="3000"><h1>Installation</h1>
+<pre>gem install middleman</pre>
+</div><div id="create" class="step" data-x="10800" data-y="3000"><h1>Create your project</h1>
+<pre>middleman init sample</pre>
+</div><div id="start" class="step" data-x="12000" data-y="3000"><h1>Start the development server</h1>
+<pre>cd sample
+bundle exec middleman server</pre>
+<h3>You are live!</h3>
+<h4>View the site at localhost:4567</h4>
+</div>
+</div>
+<script src="/javascripts/application-ea1c367d.js" type="text/javascript"></script>
+<script>
+  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
