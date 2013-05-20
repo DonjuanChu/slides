@@ -66,7 +66,7 @@ set :markdown, :fenced_code_blocks => true,
                :tables => true,
                :no_intra_emphasis => true
 
-# activate :syntax
+activate :syntax
 
 # Build-specific configuration
 configure :build do

@@ -69,7 +69,8 @@ description: Create fast sites with your favorite Ruby tools
 = step "layouts", x: 9600, y: 5000 do
   %h2 Layouts
   %p source/layouts/layout.haml
-  %pre= partial "layout"
+  = code "haml" do
+    = partial "layout"
 
 = step "helpers", x: 9600, y: 7000 do
   %h2 Helpers
