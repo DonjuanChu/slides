@@ -8,3 +8,5 @@ gem "susy", "~>1.0.5"
 gem "redcarpet"
 gem "bootstrap-sass"
 gem 'json', '~> 1.7.7'
+gem 'rake'
+gem 'middleman-gh-pages'
