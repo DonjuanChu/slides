@@ -75,44 +75,48 @@ description: Create fast sites with your favorite Ruby tools
 = step "helpers", x: 9600, y: 7000 do
   %h2 Helpers
   %p source/helpers/site_helper.rb
-  %pre= partial "helpers"
+  = code "ruby" do
+    = partial "helpers"
 
 = step "views", x: 9600, y: 9000 do
   %h2 Views
   %p source/middleman/index.haml
-  %pre
+  = code "haml" do
     = partial "views"
 
 = step "partials", x: 9600, y: 11000 do
   %h2 Partials
   %p source/_fallback.md
-  %pre= partial "partials"
+  = code "markdown" do
+    = partial "partials"
 
 = step "stylesheets", x: 9600, y: 13000 do
   %h2 Stylesheets
   %p source/stylesheets/application.sass
-  %pre= partial 'stylesheets'
+  =code "sass" do
+    = partial 'stylesheets'
 
 = step "javascripts", x: 9600, y: 15000 do
   %h2 Javascripts
   %p source/javascripts/applicaiton/tweet.coffee
-  %pre= partial 'javascripts'
+  = code "coffeescript" do
+    = partial 'javascripts'
   .well
     .tweets
 
 = step "installation", x: 9600, y: 3000 do
   %h1 Installation
-  %pre
+  = code "bash" do
     gem install middleman
 
 = step "create", x: 10800, y: 3000 do
   %h1 Create your project
-  %pre
+  = code "bash" do
     middleman init sample
 
 = step "start", x: 12000, y: 3000 do
   %h1 Start the development server
-  %pre
+  = code "bash" do
     cd sample
     bundle exec middleman server
   %h3 You are live!
