@@ -1,0 +1,10 @@
+---
+title: Presentations by Josh W Lewis
+description: Presentations by Josh W Lewis
+---
+
+- sitemap.resources.select{|r| r.data.published }.each_with_index do |p, i|
+  = step p.data.title.parameterize, x: (i * 900) do
+    %h2
+      %a{href: p.url}= p.data.title
+    %p= p.data.description
