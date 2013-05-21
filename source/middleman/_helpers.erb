@@ -1,6 +1,6 @@
 module SiteHelpers
   def page_title
-    [data.page.title, "Josh W Lewis"].join(' | ')
+    [data.page.title, "Josh W Lewis"].compact.join(' | ')
   end
 
   def page_description

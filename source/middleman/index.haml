@@ -1,19 +1,19 @@
 ---
-title: Static Sites with Middleman
-description: Create fast sites with your favorite Ruby tools
+title: Fast Sites Fast with Middleman
+description: Create fast sites fast with your favorite Ruby tools
 ---
 
 = step "title", x: 0, y: 0 do
-  %h1 Static Sites with Middleman
+  %h1 Fast Sites Fast with Middleman
   %h4
     Josh W Lewis
     %a{href: "//twitter.com/joshwlewis"} @joshwlewis
   %date 5/23/2013
 
-= step "project", x: 1200, y: 0 do
+= step "project", x: 0, y: 1000 do
   %h1 I want my own place on the web to put my thoughts and ramblings!
 
-= step "options", x: 2400, y: 0 do
+= step "options", x: 951, y: 1691, 'rotate-z' => 72 do
   %h1 What should I use?
   %h4
     %ul
@@ -22,102 +22,173 @@ description: Create fast sites with your favorite Ruby tools
       %li Drupal
       %li Roll my own with Rails
 
-= step "needs", x: 3600, y: 0 do
+= step "needs", x: 588, y: 2809, 'rotate-z' => 144 do
   %h3 Do I really need all this?
   %ul
     %li Authentication
     %li Admin Panel
     %li WYSIWYG Editor
+    %li Dynamic Page Handling
     %li Database
     %li Sophisticated Caching
     %li High-performance Server
 
-= step "static-site", x: 4800, y: 0 do
-  %h2 What about a static site?
+= step "static-site", x: -588, y: 2809, 'rotate-z' => 216 do
+  %h2 What about a plain HTML site?
   %h4
     %ul
       %li It would be fast...
       %li I could put it on ANY server...
 
-= step "sucks", x: 4800, y: 0, 'rotate-x' => 90 do
-  %h2 But, that just sucks!
+= step "sucks", x: -951, y: 1691, 'rotate-z' => 288 do
+  = code "html" do
+    :plain
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset='utf-8'>
+        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+        <title>Plain HTML App</title>
+        <meta content="I don't want to write this app" name='description'>
+        <meta content='width=device-width' name='viewport'>
+      </head>
+      ...
+  %h3 ....ugh! No Thanks!
 
-= step "middleman", x: 6000, y: 0 do
+= step "middleman", x: 0, y: 2000, z: 2000, 'rotate-z' => 360 do
   %h2 Enter Middleman
-  %h4 Static Site Generator built with Ruby
+  %h4 Ruby based Static Site Generator
   %h4
     %a{href: '//middlemanapp.com'} middlemanapp.com
 
-= step "overview", x: 7200, y: 1500 do
+= step "features", x: 0, y: 2000, z: -4000, scale: 0.025 do
   %h2 Middleman lets you:
   %h4
     %ul
-      %li Deploy anywhere!
       %li Build incredibly fast sites!
+      %li Build sites incredibly fast!
+      %li Deploy to any web server!
       %li Use layouts and partials!
       %li Use Rails-like helpers!
       %li Use your favorite RubyGems!
       %li Write Ruby Code!
 
-= step "meta-1", x: 8400, y: 3000 do
+= step "installation", y: 4000, z: 500, 'rotate-y' => 180 do
+  %h1 Installation
+  %p Prerequsites:
+  %ul
+    %li Ruby (1.9+)
+    %li RubyGems
+    %li Bundler
+  = code "bash" do
+    gem install middleman
+
+= step "workflow", y: 4000, x: -433, z: -250, 'rotate-y' => 60 do
+  %h3 Middleman Workflow
+  %ol
+    %li
+      Create project
+      = code "bash" do
+        middleman init sample
+    %li
+      Run development server (localhost:4567)
+      = code "bash" do
+        cd sample
+        bundle exec middleman server
+    %li ... ?
+    %li
+      Build static files
+      = code "bash" do
+        bundle exec middleman build
+    %li Profit!
+
+= step "structure", y: 4000, x: 433, z: -250, 'rotate-y' => -60 do
+  %h3 Sample Project Structure
+  = code "markdown" do
+    = partial "structure"
+
+= step "meta-outside", x: 0, y: 5500 do
   %h3 The code in this presentation...
 
-= step "meta-2", x: 8550, y: 3000 do
+= step "meta-inside", x: 172, y: 5510, scale: 0.0025 do
   %h3 ...built this presentation.
-  %a{href: "//github.com/joshwlewis/presentation"} github.com/joshwlewis/presentation
+  %dl
+    %dt Source Code
+    %dd
+      %a{href: "//github.com/joshwlewis/slides"} github.com/joshwlewis/slides
+    %dt In Production
+    %dd
+      %a{href: "//slides.joshwlewis.com/middleman"} slides.joshwlewis.com/middleman
 
-= step "layouts", x: 9600, y: 5000 do
+= step "layouts", x: 2000, y: 7000 do
   %h2 Layouts
   %p source/layouts/layout.haml
   = code "haml" do
     = partial "layout"
 
-= step "helpers", x: 9600, y: 7000 do
+= step "helpers", x: 1247, y: 7000, z: -1564, 'rotate-y' => 51.5 do
   %h2 Helpers
   %p source/helpers/site_helper.rb
   = code "ruby" do
     = partial "helpers"
 
-= step "views", x: 9600, y: 9000 do
+= step "views", x: -445, y: 7000, z: -1950, 'rotate-y' => 103 do
   %h2 Views
   %p source/middleman/index.haml
   = code "haml" do
     = partial "views"
 
-= step "partials", x: 9600, y: 11000 do
+= step "partials", x: -1802, y: 7000, z: -868, 'rotate-y' => 154.5 do
   %h2 Partials
   %p source/_fallback.md
   = code "markdown" do
     = partial "partials"
 
-= step "stylesheets", x: 9600, y: 13000 do
+= step "stylesheets", x: -1802, y: 7000, z: 868, 'rotate-y' => 206 do
   %h2 Stylesheets
   %p source/stylesheets/application.sass
   =code "sass" do
     = partial 'stylesheets'
 
-= step "javascripts", x: 9600, y: 15000 do
+= step "javascripts", x: -445, y: 7000, z: 1950, 'rotate-y' => 257.5 do
   %h2 Javascripts
-  %p source/javascripts/applicaiton/tweet.coffee
+  %p source/javascripts/application/tweet.coffee
   = code "coffeescript" do
     = partial 'javascripts'
   .well
     .tweets
 
-= step "installation", x: 9600, y: 3000 do
-  %h1 Installation
-  = code "bash" do
-    gem install middleman
+= step "minification", x: 1247, y: 7000, z: 1564, 'rotate-y' => 309 do
+  %h2 Asset Minification and Hashes
+  %h4 source/stylesheets/application.css.sass
+  = code "sass" do
+    :plain
+      body.impress-supported
+        .fallback-message
+          display: none
+        .step
+          width: 900px
+          .invert
+            color: #fff
+  %h4 build/stylesheets/application-ea1c367d.css
+  = code "css" do
+    :plain
+      body.impress-supported .fallback-message{display:none}body.impress-supported .step{width:900px}body.impress-supported .step .invert{color:white}
 
-= step "create", x: 10800, y: 3000 do
-  %h1 Create your project
-  = code "bash" do
-    middleman init sample
+= step "demo", y: 7000, 'rotate-y' => 360, 'rotate-x' => 90, scale: 3 do
+  %h2 Live Demo
+  %p Don't fail please =)
 
-= step "start", x: 12000, y: 3000 do
-  %h1 Start the development server
-  = code "bash" do
-    cd sample
-    bundle exec middleman server
-  %h3 You are live!
-  %h4 View the site at localhost:4567
+= step "extras", y: 8500 do
+  %h2 Extras
+  %h4
+    %ul
+      %li Blogging extension 'middleman-blog'
+      %li Syntax highlighting 'middleman-syntax'
+      %li Deploy via Github Pages 'middleman-gh-pages'
+      %li Deploy via rsync 'middleman-deploy'
+
+= step "resources", y: 10000 do
+  %h2 Do or do not. There is no try.
+
+= step "overview", y: 4500, scale: 8, 'rotate-x' => 15, 'rotate-z' => 60
