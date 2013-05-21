@@ -6,12 +6,12 @@
 <head>
 <meta charset='utf-8'>
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-<title>Static Sites with Middleman | Josh W Lewis</title>
-<meta content='Create fast sites with your favorite Ruby tools' name='description'>
+<title>Fast Sites Fast with Middleman | Josh W Lewis</title>
+<meta content='Create fast sites fast with your favorite Ruby tools' name='description'>
 <meta content='width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <meta content='Josh W Lewis' name='author'>
 <script src="/javascripts/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
-<link href="/stylesheets/application-23fda18a.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/application-91e4aa7b.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body class='impress-not-supported'>
 <div class='fallback-message'><h3>Your browser doesn&#39;t support the features needed to display this presentation.</h3>
@@ -27,14 +27,14 @@
 </ul>
 </div>
 <div id='impress'>
-<div id="title" class="step" data-x="0" data-y="0"><h1>Static Sites with Middleman</h1>
+<div id="title" class="step" data-x="0" data-y="0"><h1>Fast Sites Fast with Middleman</h1>
 <h4>
 Josh W Lewis
 <a href='//twitter.com/joshwlewis'>@joshwlewis</a>
 </h4>
 <date>5/23/2013</date>
-</div><div id="project" class="step" data-x="1200" data-y="0"><h1>I want my own place on the web to put my thoughts and ramblings!</h1>
-</div><div id="options" class="step" data-x="2400" data-y="0"><h1>What should I use?</h1>
+</div><div id="project" class="step" data-x="0" data-y="1000"><h1>I want my own place on the web to put my thoughts and ramblings!</h1>
+</div><div id="options" class="step" data-x="951" data-y="1691" data-rotate-z="72"><h1>What should I use?</h1>
 <h4>
 <ul>
 <li>Wordpress</li>
@@ -43,43 +43,115 @@ Josh W Lewis
 <li>Roll my own with Rails</li>
 </ul>
 </h4>
-</div><div id="needs" class="step" data-x="3600" data-y="0"><h3>Do I really need all this?</h3>
+</div><div id="needs" class="step" data-x="588" data-y="2809" data-rotate-z="144"><h3>Do I really need all this?</h3>
 <ul>
 <li>Authentication</li>
 <li>Admin Panel</li>
 <li>WYSIWYG Editor</li>
+<li>Dynamic Page Handling</li>
 <li>Database</li>
 <li>Sophisticated Caching</li>
 <li>High-performance Server</li>
 </ul>
-</div><div id="static-site" class="step" data-x="4800" data-y="0"><h2>What about a static site?</h2>
+</div><div id="static-site" class="step" data-x="-588" data-y="2809" data-rotate-z="216"><h2>What about a plain HTML site?</h2>
 <h4>
 <ul>
 <li>It would be fast...</li>
 <li>I could put it on ANY server...</li>
 </ul>
 </h4>
-</div><div id="sucks" class="step" data-x="4800" data-y="0" data-rotate-x="90"><h2>But, that just sucks!</h2>
-</div><div id="middleman" class="step" data-x="6000" data-y="0"><h2>Enter Middleman</h2>
-<h4>Static Site Generator built with Ruby</h4>
+</div><div id="sucks" class="step" data-x="-951" data-y="1691" data-rotate-z="288"><pre class="highlight html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">'utf-8'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">'IE=edge,chrome=1'</span> <span class="na">http-equiv=</span><span class="s">'X-UA-Compatible'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Plain HTML App<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">&quot;I don't want to write this app&quot;</span> <span class="na">name=</span><span class="s">'description'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">'width=device-width'</span> <span class="na">name=</span><span class="s">'viewport'</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+...
+</pre>
+<h3>....ugh! No Thanks!</h3>
+</div><div id="middleman" class="step" data-x="0" data-y="2000" data-z="2000" data-rotate-z="360"><h2>Enter Middleman</h2>
+<h4>Ruby based Static Site Generator</h4>
 <h4>
 <a href='//middlemanapp.com'>middlemanapp.com</a>
 </h4>
-</div><div id="overview" class="step" data-x="7200" data-y="1500"><h2>Middleman lets you:</h2>
+</div><div id="features" class="step" data-x="0" data-y="2000" data-z="-4000" data-scale="0.025"><h2>Middleman lets you:</h2>
 <h4>
 <ul>
-<li>Deploy anywhere!</li>
 <li>Build incredibly fast sites!</li>
+<li>Build sites incredibly fast!</li>
+<li>Deploy to any web server!</li>
 <li>Use layouts and partials!</li>
 <li>Use Rails-like helpers!</li>
 <li>Use your favorite RubyGems!</li>
 <li>Write Ruby Code!</li>
 </ul>
 </h4>
-</div><div id="meta-1" class="step" data-x="8400" data-y="3000"><h3>The code in this presentation...</h3>
-</div><div id="meta-2" class="step" data-x="8550" data-y="3000"><h3>...built this presentation.</h3>
-<a href='//github.com/joshwlewis/presentation'>github.com/joshwlewis/presentation</a>
-</div><div id="layouts" class="step" data-x="9600" data-y="5000"><h2>Layouts</h2>
+</div><div id="installation" class="step" data-y="4000" data-z="500" data-rotate-y="180"><h1>Installation</h1>
+<p>Prerequsites:</p>
+<ul>
+<li>Ruby (1.9+)</li>
+<li>RubyGems</li>
+<li>Bundler</li>
+</ul>
+<pre class="highlight shell">gem install middleman
+</pre>
+</div><div id="workflow" class="step" data-y="4000" data-x="-433" data-z="-250" data-rotate-y="60"><h3>Middleman Workflow</h3>
+<ol>
+<li>
+Create project
+<pre class="highlight shell">middleman init sample
+</pre>
+</li>
+<li>
+Run development server (localhost:4567)
+<pre class="highlight shell"><span class="nb">cd </span>sample
+bundle <span class="nb">exec </span>middleman server
+</pre>
+</li>
+<li>... ?</li>
+<li>
+Build static files
+<pre class="highlight shell">bundle <span class="nb">exec </span>middleman build
+</pre>
+</li>
+<li>Profit!</li>
+</ol>
+</div><div id="structure" class="step" data-y="4000" data-x="433" data-z="-250" data-rotate-y="-60"><h3>Sample Project Structure</h3>
+<pre class="highlight markdown"><span class="p">-</span> helpers
+<span class="p">  -</span> site_helper.rb
+<span class="p">-</span> source
+<span class="p">  -</span> javascripts
+<span class="p">    -</span> example.coffee
+<span class="p">  -</span> stylesheets
+<span class="p">    -</span> example.sass
+<span class="p">  -</span> layouts
+<span class="p">    -</span> layout.haml
+<span class="p">  -</span> index.html.erb
+<span class="p">  -</span> about.md
+<span class="p">-</span> build
+<span class="p">  -</span> javascripts
+<span class="p">    -</span> example.js
+<span class="p">  -</span> stylesheets
+<span class="p">    -</span> example.css
+<span class="p">  -</span> index.html
+<span class="p">  -</span> about.html
+</pre>
+</div><div id="meta-outside" class="step" data-x="0" data-y="5500"><h3>The code in this presentation...</h3>
+</div><div id="meta-inside" class="step" data-x="172" data-y="5510" data-scale="0.0025"><h3>...built this presentation.</h3>
+<dl>
+<dt>Source Code</dt>
+<dd>
+<a href='//github.com/joshwlewis/slides'>github.com/joshwlewis/slides</a>
+</dd>
+<dt>In Production</dt>
+<dd>
+<a href='//slides.joshwlewis.com/middleman'>slides.joshwlewis.com/middleman</a>
+</dd>
+</dl>
+</div><div id="layouts" class="step" data-x="2000" data-y="7000"><h2>Layouts</h2>
 <p>source/layouts/layout.haml</p>
 <pre class="highlight haml"><span class="nn">!!!5
 </span><span class="nt">%html</span>
@@ -95,11 +167,11 @@ Josh W Lewis
     ...
     <span class="p">=</span> <span class="n">javascript_include_tag</span> <span class="s2">&quot;application&quot;</span>
 </pre>
-</div><div id="helpers" class="step" data-x="9600" data-y="7000"><h2>Helpers</h2>
+</div><div id="helpers" class="step" data-x="1247" data-y="7000" data-z="-1564" data-rotate-y="51.5"><h2>Helpers</h2>
 <p>source/helpers/site_helper.rb</p>
 <pre class="highlight ruby"><span class="k">module</span> <span class="nn">SiteHelpers</span>
   <span class="k">def</span> <span class="nf">page_title</span>
-    <span class="o">[</span><span class="n">data</span><span class="nf">.page.title</span><span class="p">,</span> <span class="s2">&quot;Josh W Lewis&quot;</span><span class="o">]</span><span class="nf">.join</span><span class="p">(</span><span class="s1">' | '</span><span class="p">)</span>
+    <span class="o">[</span><span class="n">data</span><span class="nf">.page.title</span><span class="p">,</span> <span class="s2">&quot;Josh W Lewis&quot;</span><span class="o">]</span><span class="nf">.compact.join</span><span class="p">(</span><span class="s1">' | '</span><span class="p">)</span>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">page_description</span>
@@ -113,12 +185,12 @@ Josh W Lewis
   <span class="k">end</span>
 <span class="k">end</span>
 </pre>
-</div><div id="views" class="step" data-x="9600" data-y="9000"><h2>Views</h2>
+</div><div id="views" class="step" data-x="-445" data-y="7000" data-z="-1950" data-rotate-y="103"><h2>Views</h2>
 <p>source/middleman/index.haml</p>
 <pre class="highlight haml">
 <span class="p">-</span><span class="o">--</span>
-title: Static Sites with Middleman
-description: Create fast sites with your favorite Ruby tools
+title: Fast Sites Fast with Middleman
+description: Create fast sites fast with your favorite Ruby tools
 <span class="p">-</span><span class="o">--</span>
 
 <span class="p">=</span> <span class="n">step</span> <span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">0</span> <span class="k">do</span>
@@ -128,7 +200,7 @@ description: Create fast sites with your favorite Ruby tools
     <span class="nt">%a</span><span class="p">{</span><span class="n">href</span><span class="p">:</span> <span class="s2">&quot;//twitter.com/joshwlewis&quot;</span><span class="p">}</span> @joshwlewis
   <span class="nt">%date</span> 5/23/2013
 </pre>
-</div><div id="partials" class="step" data-x="9600" data-y="11000"><h2>Partials</h2>
+</div><div id="partials" class="step" data-x="-1802" data-y="7000" data-z="-868" data-rotate-y="154.5"><h2>Partials</h2>
 <p>source/_fallback.md</p>
 <pre class="highlight markdown"><span class="gu">### Your browser doesn't support the features needed to display this presentation.</span>
 
@@ -140,7 +212,7 @@ For the best experience, please use one of the following browsers:
 <span class="p">-</span> <span class="p">[</span><span class="nv">Safari</span><span class="p">](</span><span class="sx">//www.apple.com/safari</span><span class="p">)</span>
 <span class="p">-</span> <span class="p">[</span><span class="nv">Firefox</span><span class="p">](</span><span class="sx">//www.mozilla.org/firefox</span><span class="p">)</span>
 </pre>
-</div><div id="stylesheets" class="step" data-x="9600" data-y="13000"><h2>Stylesheets</h2>
+</div><div id="stylesheets" class="step" data-x="-1802" data-y="7000" data-z="868" data-rotate-y="206"><h2>Stylesheets</h2>
 <p>source/stylesheets/application.sass</p>
 <pre class="highlight sass"><span class="k">@import</span> <span class="s">url(//fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono)</span>
 
@@ -153,8 +225,8 @@ For the best experience, please use one of the following browsers:
   <span class="nc">.fallback-message</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span>
 </pre>
-</div><div id="javascripts" class="step" data-x="9600" data-y="15000"><h2>Javascripts</h2>
-<p>source/javascripts/applicaiton/tweet.coffee</p>
+</div><div id="javascripts" class="step" data-x="-445" data-y="7000" data-z="1950" data-rotate-y="257.5"><h2>Javascripts</h2>
+<p>source/javascripts/application/tweet.coffee</p>
 <pre class="highlight coffeescript"><span class="nx">jQuery</span> <span class="o">-&gt;</span>
   <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.tweets&quot;</span><span class="p">).</span><span class="na">tweet</span>
     <span class="na">avatar_size</span><span class="o">:</span> <span class="mi">48</span>
@@ -164,19 +236,33 @@ For the best experience, please use one of the following browsers:
 <div class='well'>
 <div class='tweets'></div>
 </div>
-</div><div id="installation" class="step" data-x="9600" data-y="3000"><h1>Installation</h1>
-<pre class="highlight shell">gem install middleman
+</div><div id="minification" class="step" data-x="1247" data-y="7000" data-z="1564" data-rotate-y="309"><h2>Asset Minification and Hashes</h2>
+<h4>source/stylesheets/application.css.sass</h4>
+<pre class="highlight sass"><span class="nt">body</span><span class="nc">.impress-supported</span>
+  <span class="nc">.fallback-message</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span>
+  <span class="nc">.step</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">900px</span>
+    <span class="nc">.invert</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="mh">#fff</span>
 </pre>
-</div><div id="create" class="step" data-x="10800" data-y="3000"><h1>Create your project</h1>
-<pre class="highlight shell">middleman init sample
+<h4>build/stylesheets/application-ea1c367d.css</h4>
+<pre class="highlight css"><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.fallback-message</span><span class="p">{</span><span class="nl">display</span><span class="p">:</span><span class="nb">none</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.step</span><span class="p">{</span><span class="nl">width</span><span class="p">:</span><span class="m">900px</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.step</span> <span class="nc">.invert</span><span class="p">{</span><span class="nl">color</span><span class="p">:</span><span class="no">white</span><span class="p">}</span>
 </pre>
-</div><div id="start" class="step" data-x="12000" data-y="3000"><h1>Start the development server</h1>
-<pre class="highlight shell"><span class="nb">cd </span>sample
-bundle <span class="nb">exec </span>middleman server
-</pre>
-<h3>You are live!</h3>
-<h4>View the site at localhost:4567</h4>
-</div>
+</div><div id="demo" class="step" data-y="7000" data-rotate-y="360" data-rotate-x="90" data-scale="3"><h2>Live Demo</h2>
+<p>Don't fail please =)</p>
+</div><div id="extras" class="step" data-y="8500"><h2>Extras</h2>
+<h4>
+<ul>
+<li>Blogging extension 'middleman-blog'</li>
+<li>Syntax highlighting 'middleman-syntax'</li>
+<li>Deploy via Github Pages 'middleman-gh-pages'</li>
+<li>Deploy via rsync 'middleman-deploy'</li>
+</ul>
+</h4>
+</div><div id="resources" class="step" data-y="10000"><h2>Do or do not. There is no try.</h2>
+</div><div id="overview" class="step" data-y="4500" data-scale="8" data-rotate-x="15" data-rotate-z="60"></div>
+
 </div>
 <script src="/javascripts/application-ea1c367d.js" type="text/javascript"></script>
 <script>
