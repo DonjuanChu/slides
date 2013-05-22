@@ -1,0 +1,4 @@
+- Blog Functionality `gem 'middleman-blog'`
+- Syntax highlighting `gem 'middleman-syntax'`
+- Deploy via Github Pages `gem 'middleman-gh-pages'`
+- Deploy via rsync `gem 'middleman-deploy'`

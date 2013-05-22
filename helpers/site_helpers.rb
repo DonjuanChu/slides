@@ -7,7 +7,7 @@ module SiteHelpers
     data.page.description || "Presentation by Josh W Lewis"
   end
 
-  def step(name, options, &block)
+  def step(name, options={}, &block)
     content_tag(:div, id: name, class: :step, data: options ) do
       block_given? ? capture(&block) : nil
     end

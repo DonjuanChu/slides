@@ -1,3 +1,4 @@
+```ruby
 module SiteHelpers
   def page_title
     [data.page.title, "Josh W Lewis"].compact.join(' | ')
@@ -13,3 +14,4 @@ module SiteHelpers
     end
   end
 end
+```

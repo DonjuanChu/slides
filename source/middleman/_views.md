@@ -1,3 +1,4 @@
+```haml
 
 ---
 title: Fast Sites with Middleman
@@ -10,3 +11,4 @@ description: Create fast sites fast with your favorite Ruby tools
     Josh W Lewis
     %a{href: "//twitter.com/joshwlewis"} @joshwlewis
   %date 5/23/2013
+```

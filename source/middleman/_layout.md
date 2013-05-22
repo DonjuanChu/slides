@@ -1,3 +1,4 @@
+```haml
 !!!5
 %html
   %head
@@ -11,3 +12,4 @@
     = yield
     ...
     = javascript_include_tag "application"
+```

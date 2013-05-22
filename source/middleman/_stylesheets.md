@@ -1,3 +1,4 @@
+```sass
 @import url(//fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono)
 
 $sansFontFamily: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -8,3 +9,4 @@ $baseLineHeight: 36px
 body.impress-supported
   .fallback-message
     display: none
+```
