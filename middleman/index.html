@@ -7,7 +7,7 @@
 <meta content='Create fast sites fast with your favorite Ruby tools' name='description'>
 <meta content='width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <meta content='Josh W Lewis' name='author'>
-<link href="/stylesheets/application-af6f4831.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/application-d69b69bd.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body class='impress-not-supported'>
 <div class='fallback-message'><h3>Your browser doesn&#39;t support the features needed to display this presentation.</h3>
@@ -29,16 +29,14 @@ Josh W Lewis
 <a href='//twitter.com/joshwlewis'>@joshwlewis</a>
 </h4>
 <date>5/23/2013</date>
-</div><div id="project" class="step" data-y="1000" data-z="-1000"><h1>I want to create an application to build and display my slide decks!</h1>
-</div><div id="options" class="step" data-x="951" data-y="1000" data-z="-309" data-rotate-y="-72"><h1>What could I use?</h1>
-<h4>
+</div><div id="project" class="step" data-y="1000" data-z="-1000"><h2>I want to create an application to build and display my slide decks!</h2>
+</div><div id="options" class="step" data-x="951" data-y="1000" data-z="-309" data-rotate-y="-72"><h2>What could I use?</h2>
 <ul>
 <li>Rails?</li>
 <li>Sinatra?</li>
 <li>Django?</li>
 <li>Node?</li>
 </ul>
-</h4>
 </div><div id="needs" class="step" data-x="588" data-y="1000" data-z="809" data-rotate-y="-144"><h3>Do I really need all this?</h3>
 <ul>
 <li>Authentication</li>
@@ -85,13 +83,13 @@ Josh W Lewis
 <b>Build sites incredibly fast</b>
 </li>
 </ul>
-</div><div id="installation" class="step" data-y="3750" data-z="-750" data-rotate-y="-360"><h1>Installation</h1>
-<p>Prerequsites:</p>
+</div><div id="installation" class="step" data-y="3750" data-z="-750" data-rotate-y="-360"><h3>Prerequisites</h3>
 <ul>
 <li>Ruby (1.9+)</li>
 <li>RubyGems</li>
 <li>Bundler</li>
 </ul>
+<h3>Installation</h3>
 <pre class="highlight shell">gem install middleman
 </pre>
 </div><div id="workflow" class="step" data-y="3750" data-x="650" data-z="375" data-rotate-y="-480"><h3>Middleman Workflow</h3>
@@ -102,9 +100,14 @@ Create project
 </pre>
 </li>
 <li>
-Run development server (localhost:4567)
+Install dependencies
 <pre class="highlight shell"><span class="nb">cd </span>sample
-bundle <span class="nb">exec </span>middleman server
+bundle install
+</pre>
+</li>
+<li>
+Run development server (localhost:4567)
+<pre class="highlight shell">bundle <span class="nb">exec </span>middleman server
 </pre>
 </li>
 <li>... ?</li>
@@ -116,9 +119,7 @@ Build static files
 <li>Profit!</li>
 </ol>
 </div><div id="structure" class="step" data-y="3750" data-x="-650" data-z="375" data-rotate-y="-600"><h3>Sample Project Structure</h3>
-<pre class="highlight text">- helpers
-  - site_helper.rb
-- source
+<pre class="highlight text">- source
   - javascripts
     - example.coffee
   - stylesheets
@@ -135,8 +136,8 @@ Build static files
   - index.html
   - about.html
 </pre>
-</div><div id="meta-outside" class="step" data-y="4750" data-rotate-y="-720"><h3>The code in this presentation...</h3>
-</div><div id="meta-inside" class="step" data-x="172" data-y="4760" data-rotate-y="-720" data-scale="0.0025"><h3>...built this presentation.</h3>
+</div><div id="meta-outside" class="step" data-y="4750" data-rotate-y="-720"><h2>The code in this presentation...</h2>
+</div><div id="meta-inside" class="step" data-x="201.5" data-y="4803.5" data-rotate-y="-720" data-scale="0.00625"><h2>...built this presentation.</h2>
 <dl>
 <dt>Source Code</dt>
 <dd>
@@ -250,7 +251,7 @@ For the best experience, please use one of the following browsers:
 <pre class="highlight css"><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.fallback-message</span><span class="p">{</span><span class="nl">display</span><span class="p">:</span><span class="nb">none</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.step</span><span class="p">{</span><span class="nl">width</span><span class="p">:</span><span class="m">900px</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.step</span> <span class="nc">.invert</span><span class="p">{</span><span class="nl">color</span><span class="p">:</span><span class="no">white</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nf">#middleman</span><span class="p">{</span><span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">}</span>
 </pre>
 </div><div id="demo" class="step" data-y="6000" data-rotate-y="360" data-scale="1.5"><h2>Live Demo</h2>
-<p>Don't fail please =)</p>
+<p>What could go wrong?</p>
 </div><div id="extensions" class="step" data-y="7000"><h2>Middleman Extensions</h2>
 <dl>
 <dt>Blogging functionality</dt>
