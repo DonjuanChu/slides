@@ -2,11 +2,12 @@
 
 ---
 title: Fast Sites with Middleman
+published: true
 description: Create fast sites fast with your favorite Ruby tools
 ---
 
-= step "title", x: 0, y: 0 do
-  %h1 Static Sites with Middleman
+= step "title" do
+  %h1 Fast Sites with Middleman
   %h4
     Josh W Lewis
     %a{href: "//twitter.com/joshwlewis"} @joshwlewis

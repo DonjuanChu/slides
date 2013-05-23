@@ -1,7 +1,8 @@
 ```sass
-@import url(//fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono)
-
-$sansFontFamily: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+@import url(//fonts.googleapis.com/css?family=Droid+Sans...
+@import "vendor/solarized"
+$sansFontFamily: "Droid Sans", "Helvetica Neue", Helvetica...
+$monoFontFamily: "Droid Sans Mono", Monaco, Menlo...
 $baseFontSize: 24px
 $baseLineHeight: 36px
 @import "bootstrap"
@@ -9,4 +10,6 @@ $baseLineHeight: 36px
 body.impress-supported
   .fallback-message
     display: none
+  .step
+    width: 900px
 ```

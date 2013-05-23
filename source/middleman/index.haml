@@ -1,7 +1,7 @@
 ---
 title: Fast Sites with Middleman
-description: Create fast sites fast with your favorite Ruby tools
 published: true
+description: Create fast sites fast with your favorite Ruby tools
 ---
 
 = step "title" do
@@ -12,16 +12,16 @@ published: true
   %date 5/23/2013
 
 = step "project", y: 1000, z: -1000 do
-  %h1 I want my own place on the web to put my thoughts and ramblings!
+  %h1 I want to create an application to build and display my slide decks!
 
 = step "options", x: 951, y: 1000, z: -309, 'rotate-y' => -72 do
-  %h1 What should I use?
+  %h1 What could I use?
   %h4
     %ul
-      %li Wordpress
-      %li Movable Type
-      %li Drupal
-      %li Roll my own with Rails
+      %li Rails?
+      %li Sinatra?
+      %li Django?
+      %li Node?
 
 = step "needs", x: 588, y: 1000, z: 809, 'rotate-y' => -144 do
   %h3 Do I really need all this?
@@ -30,9 +30,8 @@ published: true
     %li Admin Panel
     %li WYSIWYG Editor
     %li Dynamic Page Handling
-    %li Database
+    %li Database storage
     %li Sophisticated Caching
-    %li High-performance Server
 
 = step "static-site", x: -588, y: 1000, z: 809, 'rotate-y' => -216 do
   %h2 What about a plain HTML site?
@@ -51,19 +50,19 @@ published: true
   %h4
     %a{href: '//middlemanapp.com'} middlemanapp.com
 
-= step "features", y: 3000 do
-  %h2 Middleman lets you:
-  %h4
-    %ul
-      %li Build incredibly fast sites!
-      %li Build sites incredibly fast!
-      %li Deploy to any web server!
-      %li Use layouts and partials!
-      %li Use Rails-like helpers!
-      %li Use your favorite RubyGems!
-      %li Write Ruby Code!
+= step "benefits", y: 2750, 'rotate-y' => -360 do
+  %h3 Middleman lets you:
+  %ul
+    %li Write Ruby code
+    %li Use layouts and partials
+    %li Use Rails-like helpers
+    %li Deploy anywhere
+    %li
+      %b Build incredibly fast sites
+    %li
+      %b Build sites incredibly fast
 
-= step "installation", y: 4000, z: 750, 'rotate-y' => 180 do
+= step "installation", y: 3750, z: -750, 'rotate-y' => -360 do
   %h1 Installation
   %p Prerequsites:
   %ul
@@ -73,7 +72,7 @@ published: true
   = code "bash" do
     gem install middleman
 
-= step "workflow", y: 4000, x: -650, z: -375, 'rotate-y' => 60 do
+= step "workflow", y: 3750, x: 650, z: 375, 'rotate-y' => -480 do
   %h3 Middleman Workflow
   %ol
     %li
@@ -92,14 +91,14 @@ published: true
         bundle exec middleman build
     %li Profit!
 
-= step "structure", y: 4000, x: 650, z: -375, 'rotate-y' => -60 do
+= step "structure", y: 3750, x: -650, z: 375, 'rotate-y' => -600 do
   %h3 Sample Project Structure
   = partial "structure"
 
-= step "meta-outside", y: 5000 do
+= step "meta-outside", y: 4750, 'rotate-y' => -720 do
   %h3 The code in this presentation...
 
-= step "meta-inside", x: 172, y: 5010, scale: 0.0025 do
+= step "meta-inside", x: 172, y: 4760, 'rotate-y' => -720, scale: 0.0025 do
   %h3 ...built this presentation.
   %dl
     %dt Source Code
@@ -149,27 +148,36 @@ published: true
   %h2 Live Demo
   %p Don't fail please =)
 
-= step "extensions", y: 8000 do
+= step "extensions", y: 7000 do
   %h2 Middleman Extensions
-  %p Add to your Gemfile
-  = partial 'extensions'
+  %dl
+    %dt Blogging functionality
+    %dd
+      %a{href: '//github.com/middleman/middleman-blog'} github.com/middleman/middleman-blog
+    %dt Syntax highlighting
+    %dd
+      %a{href: '//github.com/middleman/middleman-syntax'} github.com/middleman/middleman-syntax
+    %dt Deploy to Github Pages
+    %dd
+      %a{href: '//github.com/neo/middleman-gh-pages'} github.com/neo/middleman-gh-pages
+    %dt Deploy to most servers
+    %dd
+      %a{href: '//github.com/tvaughan/middleman-deploy'} github.com/tvaughan/middleman-deploy
 
-= step "resources", 'rotate-x' => -90, y: 9000 do
+= step "resources", x: -200, y: 7500, 'rotate-x' => -90 do
   %h2 Resources
   %dl
-    %dt This Presentation
-    %dd
-      %a{href: "//slides.joshwlewis.com/middleman"} slides.joshwlewis.com/middleman
-    %dt Presentation Source
-    %dd
-      %a{href: "//github.com/joshwlewis/slides"} github.com/joshwlewis/slides
     %dt Middleman
     %dd
       %a{href: "//middlemanapp.com"} middlemanapp.com
     %dt impress.js (3D slides)
     %dd
       %a{href: "//bartaz.github.io/impress.js"} bartaz.github.io/impress.js
+    %dt This Presentation
+    %dd
+      %a{href: "//slides.joshwlewis.com/middleman"} slides.joshwlewis.com/middleman
+    %dt Presentation Source
+    %dd
+      %a{href: "//github.com/joshwlewis/slides"} github.com/joshwlewis/slides
 
-
-
-= step "overview", y: 4500, scale: 8, 'rotate-x' => 15, 'rotate-z' => 65
+= step "overview", y: 3750, scale: 6.5, 'rotate-x' => 20, 'rotate-z' => 70

@@ -4,12 +4,16 @@ module SiteHelpers
   end
 
   def page_description
-    data.page.description || "Presentation by Josh W Lewis"
+    data.page.description || "Slides by Josh W Lewis"
   end
 
-  def step(name, options={}, &block)
-    content_tag(:div, id: name, class: :step, data: options ) do
-      block_given? ? capture(&block) : nil
+  def step(id, opts={}, &block)
+    content_tag :div, id: id, class: :step, data: opts do
+      capture(&block) if block_given?
     end
+  end
+
+  def published_pages
+    sitemap.resources.select{|r| r.data.published }
   end
 end
