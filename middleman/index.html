@@ -7,7 +7,7 @@
 <meta content='Create fast sites fast with your favorite Ruby tools' name='description'>
 <meta content='width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <meta content='Josh W Lewis' name='author'>
-<link href="/stylesheets/application-d69b69bd.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/application-02dc3d83.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body class='impress-not-supported'>
 <div class='fallback-message'><h3>Your browser doesn&#39;t support the features needed to display this presentation.</h3>
@@ -73,7 +73,7 @@ Josh W Lewis
 </div><div id="benefits" class="step" data-y="2750" data-rotate-y="-360"><h3>Middleman lets you:</h3>
 <ul>
 <li>Write Ruby code</li>
-<li>Use layouts and partials</li>
+<li>Use layouts, views and paritals</li>
 <li>Use Rails-like helpers</li>
 <li>Deploy anywhere</li>
 <li>
@@ -137,7 +137,7 @@ Build static files
   - about.html
 </pre>
 </div><div id="meta-outside" class="step" data-y="4750" data-rotate-y="-720"><h2>The code in this presentation...</h2>
-</div><div id="meta-inside" class="step" data-x="201.5" data-y="4803.5" data-rotate-y="-720" data-scale="0.00625"><h2>...built this presentation.</h2>
+</div><div id="meta-inside" class="step" data-x="431.5" data-y="4766" data-rotate-y="-720" data-scale="0.005"><h2>...built this presentation.</h2>
 <dl>
 <dt>Source Code</dt>
 <dd>
@@ -212,12 +212,12 @@ For the best experience, please use one of the following browsers:
 </pre>
 </div><div id="stylesheets" class="step" data-x="-1802" data-y="6000" data-z="868" data-rotate-y="206"><h2>Stylesheets</h2>
 <p>source/stylesheets/application.sass</p>
-<pre class="highlight sass"><span class="k">@import</span> <span class="s">url(//fonts.googleapis.com/css?family=Droid+Sans...</span>
+<pre class="highlight sass"><span class="k">@import</span> <span class="s">url(//fonts.googleapis.com/css?family=Droid...</span>
 <span class="k">@import</span> <span class="s">&quot;vendor/solarized&quot;</span>
-<span class="nv">$sansFontFamily</span><span class="p">:</span> <span class="s2">&quot;Droid Sans&quot;</span><span class="o">,</span> <span class="s2">&quot;Helvetica Neue&quot;</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">...</span>
-<span class="nv">$monoFontFamily</span><span class="p">:</span> <span class="s2">&quot;Droid Sans Mono&quot;</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">...</span>
-<span class="nv">$baseFontSize</span><span class="p">:</span> <span class="m">24px</span>
-<span class="nv">$baseLineHeight</span><span class="p">:</span> <span class="m">36px</span>
+<span class="nv">$sansFontFamily</span><span class="p">:</span> <span class="s2">&quot;Droid Sans&quot;</span><span class="o">,</span> <span class="s2">&quot;Helvetica Neue&quot;</span><span class="o">...</span>
+<span class="nv">$monoFontFamily</span><span class="p">:</span> <span class="s2">&quot;Droid Sans Mono&quot;</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">...</span>
+<span class="nv">$baseFontSize</span><span class="p">:</span> <span class="m">26px</span>
+<span class="nv">$baseLineHeight</span><span class="p">:</span> <span class="m">38px</span>
 <span class="k">@import</span> <span class="s">&quot;bootstrap&quot;</span>
 
 <span class="nt">body</span><span class="nc">.impress-supported</span>
@@ -225,6 +225,8 @@ For the best experience, please use one of the following browsers:
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span>
   <span class="nc">.step</span>
     <span class="nl">width</span><span class="p">:</span> <span class="m">900px</span>
+  <span class="nn">#title</span><span class="o">,</span> <span class="nn">#middleman</span><span class="o">,</span> <span class="nn">#demo</span><span class="o">,</span> <span class="nn">#meta-outside</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span>
 </pre>
 </div><div id="javascripts" class="step" data-x="-445" data-y="6000" data-z="1950" data-rotate-y="257.5"><h2>Javascripts</h2>
 <p>source/javascripts/application/tweet.coffee</p>
@@ -244,11 +246,11 @@ For the best experience, please use one of the following browsers:
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span>
   <span class="nc">.step</span>
     <span class="nl">width</span><span class="p">:</span> <span class="m">900px</span>
-  <span class="nn">#middleman</span>
+  <span class="nn">#title</span><span class="o">,</span> <span class="nn">#middleman</span><span class="o">,</span> <span class="nn">#demo</span><span class="o">,</span> <span class="nn">#meta-outside</span>
     <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span>
 </pre>
 <h4>build/stylesheets/application-ea1c367d.css</h4>
-<pre class="highlight css"><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.fallback-message</span><span class="p">{</span><span class="nl">display</span><span class="p">:</span><span class="nb">none</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.step</span><span class="p">{</span><span class="nl">width</span><span class="p">:</span><span class="m">900px</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.step</span> <span class="nc">.invert</span><span class="p">{</span><span class="nl">color</span><span class="p">:</span><span class="no">white</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nf">#middleman</span><span class="p">{</span><span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">}</span>
+<pre class="highlight css"><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.fallback-message</span><span class="p">{</span><span class="nl">display</span><span class="p">:</span><span class="nb">none</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nc">.step</span><span class="p">{</span><span class="nl">width</span><span class="p">:</span><span class="m">850px</span><span class="p">}</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nf">#title</span><span class="o">,</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nf">#middleman</span><span class="o">,</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nf">#demo</span><span class="o">,</span><span class="nt">body</span><span class="nc">.impress-supported</span> <span class="nf">#meta-outside</span><span class="p">{</span><span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">}</span>
 </pre>
 </div><div id="demo" class="step" data-y="6000" data-rotate-y="360" data-scale="1.5"><h2>Live Demo</h2>
 <p>What could go wrong?</p>
