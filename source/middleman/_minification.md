@@ -5,10 +5,10 @@ body.impress-supported
     display: none
   .step
     width: 900px
-  #middleman
+  #title, #middleman, #demo, #meta-outside
     text-align: center
 ```
 #### build/stylesheets/application-ea1c367d.css
 ```css
-body.impress-supported .fallback-message{display:none}body.impress-supported .step{width:900px}body.impress-supported .step .invert{color:white}body.impress-supported #middleman{text-align:center}
+body.impress-supported .fallback-message{display:none}body.impress-supported .step{width:850px}body.impress-supported #title,body.impress-supported #middleman,body.impress-supported #demo,body.impress-supported #meta-outside{text-align:center}
 ```
