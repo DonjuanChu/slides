@@ -3,13 +3,10 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Josh W Lewis -- @joshwlewis
 
 # TECHNOLOGY COLOPHON
 
+    Ruby, Middleman
+    impress.js, jQuery
     HTML5, CSS3
-    jQuery, Modernizr
