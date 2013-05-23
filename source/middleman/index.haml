@@ -12,16 +12,15 @@ description: Create fast sites fast with your favorite Ruby tools
   %date 5/23/2013
 
 = step "project", y: 1000, z: -1000 do
-  %h1 I want to create an application to build and display my slide decks!
+  %h2 I want to create an application to build and display my slide decks!
 
 = step "options", x: 951, y: 1000, z: -309, 'rotate-y' => -72 do
-  %h1 What could I use?
-  %h4
-    %ul
-      %li Rails?
-      %li Sinatra?
-      %li Django?
-      %li Node?
+  %h2 What could I use?
+  %ul
+    %li Rails?
+    %li Sinatra?
+    %li Django?
+    %li Node?
 
 = step "needs", x: 588, y: 1000, z: 809, 'rotate-y' => -144 do
   %h3 Do I really need all this?
@@ -63,12 +62,12 @@ description: Create fast sites fast with your favorite Ruby tools
       %b Build sites incredibly fast
 
 = step "installation", y: 3750, z: -750, 'rotate-y' => -360 do
-  %h1 Installation
-  %p Prerequsites:
+  %h3 Prerequisites
   %ul
     %li Ruby (1.9+)
     %li RubyGems
     %li Bundler
+  %h3 Installation
   = code "bash" do
     gem install middleman
 
@@ -80,9 +79,13 @@ description: Create fast sites fast with your favorite Ruby tools
       = code "bash" do
         middleman init sample
     %li
-      Run development server (localhost:4567)
+      Install dependencies
       = code "bash" do
         cd sample
+        bundle install
+    %li
+      Run development server (localhost:4567)
+      = code "bash" do
         bundle exec middleman server
     %li ... ?
     %li
@@ -96,10 +99,10 @@ description: Create fast sites fast with your favorite Ruby tools
   = partial "structure"
 
 = step "meta-outside", y: 4750, 'rotate-y' => -720 do
-  %h3 The code in this presentation...
+  %h2 The code in this presentation...
 
-= step "meta-inside", x: 172, y: 4760, 'rotate-y' => -720, scale: 0.0025 do
-  %h3 ...built this presentation.
+= step "meta-inside", x: 201.5, y: 4803.5, 'rotate-y' => -720, scale: 0.00625 do
+  %h2 ...built this presentation.
   %dl
     %dt Source Code
     %dd
@@ -146,7 +149,7 @@ description: Create fast sites fast with your favorite Ruby tools
 
 = step "demo", y: 6000, 'rotate-y' => 360, scale: 1.5 do
   %h2 Live Demo
-  %p Don't fail please =)
+  %p What could go wrong?
 
 = step "extensions", y: 7000 do
   %h2 Middleman Extensions

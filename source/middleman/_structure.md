@@ -1,6 +1,4 @@
 ```
-- helpers
-  - site_helper.rb
 - source
   - javascripts
     - example.coffee
